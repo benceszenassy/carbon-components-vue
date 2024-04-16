@@ -1956,6 +1956,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@carbon/colors@npm:^11.21.0":
+  version: 11.21.0
+  resolution: "@carbon/colors@npm:11.21.0"
+  dependencies:
+    "@ibm/telemetry-js": ^1.2.1
+  checksum: 64badf2d24974b6a902723824e377ebc5755344a1eb4949d1e5c598aaf82e9f6c234060cba199e1179c6494fb0664b54e678308f9ffcad499cd0e29c3edafe5b
+  languageName: node
+  linkType: hard
+
+"@carbon/feature-flags@npm:^0.19.0":
+  version: 0.19.0
+  resolution: "@carbon/feature-flags@npm:0.19.0"
+  dependencies:
+    "@ibm/telemetry-js": ^1.2.1
+  checksum: f03aafca3b5aa419fb402510a5f6be48dbad3ee2bff916b03a9dd385bec65b8b1b8da7982f4e4a31844c0eb5e7198228becee3854c021be9d44ac4e98f01e5c6
+  languageName: node
+  linkType: hard
+
 "@carbon/grid@npm:^10.43.0":
   version: 10.43.1
   resolution: "@carbon/grid@npm:10.43.1"
@@ -1963,6 +1981,16 @@ __metadata:
     "@carbon/import-once": ^10.7.0
     "@carbon/layout": ^10.37.1
   checksum: d59818f5602b1cada5188982a687ef861c63a2e165ed3266496b0a0b7e2e12528e55d4ac9d7d4134a4f4c19e7e16fd48425e5982279ac86ff914ba879c120a32
+  languageName: node
+  linkType: hard
+
+"@carbon/grid@npm:^11.22.0":
+  version: 11.22.0
+  resolution: "@carbon/grid@npm:11.22.0"
+  dependencies:
+    "@carbon/layout": ^11.21.0
+    "@ibm/telemetry-js": ^1.2.1
+  checksum: 4efd8d12019ebdf9890245dbe6b081efe017acbce24c8af0a69a77eaf3e1796e268e8bca0efbdde08556d74c2da00b8bfe6b2379272131ab2ba340eab594aa93
   languageName: node
   linkType: hard
 
@@ -1996,12 +2024,43 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon/telemetry@npm:0.1.0":
-  version: 0.1.0
-  resolution: "@carbon/telemetry@npm:0.1.0"
-  bin:
-    carbon-telemetry: bin/carbon-telemetry.js
-  checksum: e93039763ed40b612a1cb5c70001d5e7e92ff034f1559676d47ce9a98e6285ba2856f6a59146b03e6349702eb96d61f2fe91349e981ca858e45c4527a3c1e876
+"@carbon/layout@npm:^11.21.0":
+  version: 11.21.0
+  resolution: "@carbon/layout@npm:11.21.0"
+  dependencies:
+    "@ibm/telemetry-js": ^1.2.1
+  checksum: 7aeb621fafe968dbfbc2b1dc6aaf9111d6d4edca682336616523145e125322a2b01e7c1e3c323852f5392c3346eecf6a4ecd1aa7019cc968eed8f3f3a3659233
+  languageName: node
+  linkType: hard
+
+"@carbon/motion@npm:^11.17.0":
+  version: 11.17.0
+  resolution: "@carbon/motion@npm:11.17.0"
+  dependencies:
+    "@ibm/telemetry-js": ^1.2.1
+  checksum: 9efa5e359bd0958af99a44a6a37cc3dbb434422f2ea1d9f4b1bf4e14c0ff79be242db2cf0f0912a0f49aadb2991bc5e77903e0e711efc0dc49ca538e4e335da2
+  languageName: node
+  linkType: hard
+
+"@carbon/styles@npm:^1.55.0":
+  version: 1.55.0
+  resolution: "@carbon/styles@npm:1.55.0"
+  dependencies:
+    "@carbon/colors": ^11.21.0
+    "@carbon/feature-flags": ^0.19.0
+    "@carbon/grid": ^11.22.0
+    "@carbon/layout": ^11.21.0
+    "@carbon/motion": ^11.17.0
+    "@carbon/themes": ^11.34.0
+    "@carbon/type": ^11.26.0
+    "@ibm/plex": 6.0.0-next.6
+    "@ibm/telemetry-js": ^1.2.1
+  peerDependencies:
+    sass: ^1.33.0
+  peerDependenciesMeta:
+    sass:
+      optional: true
+  checksum: 9ec695a0e573d4ce3ae08fbf373c29a61d1485036c18c22293647c6c539d189be7b70b732581607cec4f289438cf4ce046795ea97e9607c4e04599368f99e161
   languageName: node
   linkType: hard
 
@@ -2017,6 +2076,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@carbon/themes@npm:^11.34.0":
+  version: 11.34.0
+  resolution: "@carbon/themes@npm:11.34.0"
+  dependencies:
+    "@carbon/colors": ^11.21.0
+    "@carbon/layout": ^11.21.0
+    "@carbon/type": ^11.26.0
+    "@ibm/telemetry-js": ^1.2.1
+    color: ^4.0.0
+  checksum: 7091be148ec33bcde1b4e1105c9e241350581c568dce0bd87014e56f63d92d4df4785cdbdbc1647262165f8b8102aa20c9b13040b100d334793164281a83ab1f
+  languageName: node
+  linkType: hard
+
 "@carbon/type@npm:^10.45.1":
   version: 10.45.1
   resolution: "@carbon/type@npm:10.45.1"
@@ -2024,6 +2096,17 @@ __metadata:
     "@carbon/grid": ^10.43.0
     "@carbon/import-once": ^10.7.0
   checksum: 08d168987495472eea47241fd1533d3ce7582813eabace8b108d5ec751286910dd6229957ed453f1fcfd18f06e9cb877a0631eea41d83dd5e8fde98e88b7bbb8
+  languageName: node
+  linkType: hard
+
+"@carbon/type@npm:^11.26.0":
+  version: 11.26.0
+  resolution: "@carbon/type@npm:11.26.0"
+  dependencies:
+    "@carbon/grid": ^11.22.0
+    "@carbon/layout": ^11.21.0
+    "@ibm/telemetry-js": ^1.2.1
+  checksum: 60aaed6c77b603cc9dc4705db3940895b15466e5c3aa06718329e4a3ddd6c9388370f1df646af73b7c0f201fdabf851d0b9a12ce165863e5f39c80738a396044
   languageName: node
   linkType: hard
 
@@ -2094,6 +2177,7 @@ __metadata:
     "@babel/core": ^7.17.10
     "@babel/eslint-parser": ^7.17.0
     "@carbon/icons-vue": ^10.60.0
+    "@carbon/styles": ^1.55.0
     "@commitlint/cli": ^16.3.0
     "@commitlint/config-conventional": ^16.2.4
     "@ibm/telemetry-js": ^1.2.1
@@ -2113,7 +2197,6 @@ __metadata:
     babel-core: ^6.26.3
     babel-jest: ^27.5.1
     babel-loader: ^8.3.0
-    carbon-components: ^10.58.5
     copy-webpack-plugin: ^10.2.4
     css-loader: ^6.7.2
     eslint: ^8.28.0
@@ -2475,6 +2558,13 @@ __metadata:
   version: 3.0.2
   resolution: "@hutson/parse-repository-url@npm:3.0.2"
   checksum: 39992c5f183c5ca3d761d6ed9dfabcb79b5f3750bf1b7f3532e1dc439ca370138bbd426ee250fdaba460bc948e6761fbefd484b8f4f36885d71ded96138340d1
+  languageName: node
+  linkType: hard
+
+"@ibm/plex@npm:6.0.0-next.6":
+  version: 6.0.0-next.6
+  resolution: "@ibm/plex@npm:6.0.0-next.6"
+  checksum: cb7bece0f8688cf92a3fa37ab47c5921f22a2eb5e40dd72a3d6bbcd715910b0d79f9d160e229514a0c78c70679676746a93f4791a57407fc6aa636105aa11891
   languageName: node
   linkType: hard
 
@@ -9264,18 +9354,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"carbon-components@npm:^10.58.5":
-  version: 10.58.5
-  resolution: "carbon-components@npm:10.58.5"
-  dependencies:
-    "@carbon/telemetry": 0.1.0
-    flatpickr: 4.6.1
-    lodash.debounce: ^4.0.8
-    warning: ^3.0.0
-  checksum: 120de6f43908a90310230dedde194ab2a8751da257c4258306aa35900df6c0e97cda2d73e7455be9a49ca529d4a579c3b721a41ed6665d0c4abc98efb38488ca
-  languageName: node
-  linkType: hard
-
 "case-sensitive-paths-webpack-plugin@npm:^2.3.0":
   version: 2.4.0
   resolution: "case-sensitive-paths-webpack-plugin@npm:2.4.0"
@@ -9793,7 +9871,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color-string@npm:^1.6.0":
+"color-string@npm:^1.6.0, color-string@npm:^1.9.0":
   version: 1.9.1
   resolution: "color-string@npm:1.9.1"
   dependencies:
@@ -9819,6 +9897,16 @@ __metadata:
     color-convert: ^1.9.3
     color-string: ^1.6.0
   checksum: f81220e8b774d35865c2561be921f5652117638dcda7ca4029262046e37fc2444ac7bbfdd110cf1fd9c074a4ee5eda8f85944ffbdda26186b602dd9bb05f6400
+  languageName: node
+  linkType: hard
+
+"color@npm:^4.0.0":
+  version: 4.2.3
+  resolution: "color@npm:4.2.3"
+  dependencies:
+    color-convert: ^2.0.1
+    color-string: ^1.9.0
+  checksum: 0579629c02c631b426780038da929cca8e8d80a40158b09811a0112a107c62e10e4aad719843b791b1e658ab4e800558f2e87ca4522c8b32349d497ecb6adeb4
   languageName: node
   linkType: hard
 
@@ -12816,13 +12904,6 @@ __metadata:
   bin:
     flat: cli.js
   checksum: 12a1536ac746db74881316a181499a78ef953632ddd28050b7a3a43c62ef5462e3357c8c29d76072bb635f147f7a9a1f0c02efef6b4be28f8db62ceb3d5c7f5d
-  languageName: node
-  linkType: hard
-
-"flatpickr@npm:4.6.1":
-  version: 4.6.1
-  resolution: "flatpickr@npm:4.6.1"
-  checksum: 66ea82084a70570a0dcf5a46a3b7e6a6551ec06fd1238f544226540feae69d2c3fd7af69f77c73023059e1a0d50e2f6ed0a6c4d4c390794cc4c8dd3c50002338
   languageName: node
   linkType: hard
 
@@ -25329,15 +25410,6 @@ __metadata:
   dependencies:
     makeerror: 1.0.12
   checksum: ad7a257ea1e662e57ef2e018f97b3c02a7240ad5093c392186ce0bcf1f1a60bbadd520d073b9beb921ed99f64f065efb63dfc8eec689a80e569f93c1c5d5e16c
-  languageName: node
-  linkType: hard
-
-"warning@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "warning@npm:3.0.0"
-  dependencies:
-    loose-envify: ^1.0.0
-  checksum: c9f99a12803aab81b29858e7dc3415bf98b41baee3a4c3acdeb680d98c47b6e17490f1087dccc54432deed5711a5ce0ebcda2b27e9b5eb054c32ae50acb4419c
   languageName: node
   linkType: hard
 
