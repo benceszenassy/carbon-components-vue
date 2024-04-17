@@ -24,17 +24,19 @@
     >
       <ChevronRight16 :class="`${carbonPrefix}--accordion__arrow`" />
 
-      <p :class="`${carbonPrefix}--accordion__title`">
+      <div :class="`${carbonPrefix}--accordion__title`">
         <!-- @slot title of the accordion item -->
 
         <slot name="title"></slot>
-      </p>
+      </div>
     </button>
 
-    <div :id="cvId" :class="`${carbonPrefix}--accordion__content`">
-      <!-- @slot content of accordion item -->
+    <div :class="`${carbonPrefix}--accordion__wrapper`">
+      <div :id="cvId" :class="`${carbonPrefix}--accordion__content`">
+        <!-- @slot content of accordion item -->
 
-      <slot name="content"></slot>
+        <slot name="content"></slot>
+      </div>
     </div>
   </li>
 </template>
@@ -109,5 +111,3 @@ onBeforeUnmount(() => {
   deregisterItem(cvId.value);
 });
 </script>
-
-<style lang="scss"></style>

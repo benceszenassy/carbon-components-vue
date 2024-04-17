@@ -1,15 +1,14 @@
-export const alignConsts = ['', 'start', 'end'];
+export const alignConsts = ['start', 'end'];
 alignConsts.$labels = {
-  'Default (end)': 0,
-  'Start (start)': 1,
-  'End (end)': 2,
+  'Start (start)': 0,
+  'Default (end)': 1,
 };
-export const sizeConsts = ['', 'sm', 'md', 'xl'];
+export const sizeConsts = ['', 'sm', 'md', 'lg'];
 sizeConsts.$labels = {
   'Default (md)': 0,
   'Small (sm)': 1,
   'Medium (md)': 2,
-  'Extra large (xl)': 3,
+  'Large (lg)': 3,
 };
 
 const CvAccordionConsts = { alignConsts, sizeConsts };
