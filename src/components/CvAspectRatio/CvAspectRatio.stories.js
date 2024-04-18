@@ -23,6 +23,9 @@ export default {
         defaultValue: { summary: `"${CvAspectRatioConsts.aspectRatios[0]}"` },
       },
     },
+    as: {
+      control: 'text',
+    },
     width: {
       control: { type: 'range', min: 200, max: 500 },
       description: 'Width of container around `CvAspectRatio`',
@@ -30,27 +33,34 @@ export default {
   },
 };
 
-const template = `<div class="width-container" :style="{ width: args.width + 'px' }">Container width: {{ args.width }}px
-  <cv-aspect-ratio v-bind="args">
+const Template =
+  template =>
+  (args, { argTypes }) => ({
+    props: Object.keys(argTypes),
+    components: { CvAspectRatio },
+    setup: () => ({ args }),
+    template,
+  });
+
+/**
+ * DEFAULT STORY
+ */
+
+const defaultTemplate = `<div class="width-container" :style="{ width: args.width + 'px' }">Container width: {{ args.width }}px
+  <cv-aspect-ratio :ratio="args.ratio" :as="args.as">
     Content<br />
     Width-based only!
   </cv-aspect-ratio>
 </div>
 `;
-const Template = args => {
-  return {
-    components: { CvAspectRatio },
-    setup: () => ({ args }),
-    template,
-  };
-};
 
-export const Default = Template.bind({});
+export const Default = Template(defaultTemplate).bind({});
 Default.args = {
   width: 200,
+  as: 'div',
 };
 Default.parameters = storyParametersObject(
   Default.parameters,
-  template,
+  defaultTemplate,
   Default.args
 );
