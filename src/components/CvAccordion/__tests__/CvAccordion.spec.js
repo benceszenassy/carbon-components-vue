@@ -2,6 +2,7 @@
  * NOTE: This test needs to be converted to use the new library `@testing-library/vue`. See CvCheckbox test for example.
  */
 import { shallowMount, mount } from '@vue/test-utils';
+import { render } from '@testing-library/vue';
 import { ref } from 'vue';
 
 import { CvAccordion, CvAccordionItem } from '../';
@@ -143,6 +144,14 @@ describe('CvAccordion', () => {
     expectedState[0].open = true; // 0 open
     expect(acc.vm.componentRef.state).toEqual(expectedState);
   });
+
+  it('accessible', async () => {
+    const main = document.createElement('main');
+    const result = render(AccordionWithItemContent, {
+      container: document.body.appendChild(main),
+    });
+    await expect(result.container).toBeAccessible('cv-accordion');
+  }, 10000);
 
   // it('Register, deregister, onActionItemClick work to produced state', () => {
   //   const emit = jest.fn();
