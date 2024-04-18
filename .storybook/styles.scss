@@ -2,10 +2,6 @@
   $prefix: 'bx'
 );
 
-@use '@carbon/styles/scss/fonts';
-@use '@carbon/styles/scss/_breakpoint.scss';
-@use '@carbon/styles/scss/type';
-
 // for $white, $g10, $g90, $g100
 @use '@carbon/styles/scss/themes' as *;
 
