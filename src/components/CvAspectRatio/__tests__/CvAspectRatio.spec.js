@@ -2,11 +2,12 @@
  * NOTE: This test needs to be converted to use the new library `@testing-library/vue`. See CvCheckbox test for example.
  */
 import { shallowMount } from '@vue/test-utils';
+import { render } from '@testing-library/vue';
 import { carbonPrefix } from '../../../global/settings';
 import { CvAspectRatio, CvAspectRatioConsts } from '..';
 
 describe('CvAspectRatio', () => {
-  it('CvAspectRatio - default', () => {
+  it('default', () => {
     const wrapper = shallowMount(CvAspectRatio);
 
     const divTag = wrapper.find('div');
@@ -18,7 +19,7 @@ describe('CvAspectRatio', () => {
     );
   });
 
-  it('CvAspectRatio - ratios', async () => {
+  it('ratios', async () => {
     const wrapper = shallowMount(CvAspectRatio);
 
     const divTag = wrapper.find('div');
@@ -34,7 +35,7 @@ describe('CvAspectRatio', () => {
     }
   });
 
-  it('CvAspectRatio - as', async () => {
+  it('as', async () => {
     const wrapper = shallowMount(CvAspectRatio);
     expect(wrapper.element.tagName.toLowerCase()).toEqual('div');
 
@@ -42,7 +43,7 @@ describe('CvAspectRatio', () => {
     expect(wrapper.element.tagName.toLowerCase()).toEqual('p');
   });
 
-  it('CvAspectRatio - ratio validator', () => {
+  it('ratio validator', () => {
     const spy = jest.spyOn(console, 'error').mockImplementation();
 
     for (const ratio of CvAspectRatioConsts.aspectRatios) {
@@ -57,4 +58,12 @@ describe('CvAspectRatio', () => {
 
     expect(spy).toBeCalled();
   });
+
+  it('accessible', async () => {
+    const main = document.createElement('main');
+    const result = render(CvAspectRatio, {
+      container: document.body.appendChild(main),
+    });
+    await expect(result.container).toBeAccessible('cv-aspect-ratio');
+  }, 10000);
 });
