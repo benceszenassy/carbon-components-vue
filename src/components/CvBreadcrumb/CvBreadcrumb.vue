@@ -12,27 +12,24 @@
   </nav>
 </template>
 
-<script>
+<script setup>
 import { carbonPrefix } from '../../global/settings';
 
-export default {
-  name: 'CvBreadcrumb',
-  props: {
-    /**
-     * A11y label
-     */
-    ariaLabel: {
-      type: String,
-      default: 'Breadcrumb',
-    },
-    /**
-     * Stop trailing slash from being added
-     */
-    noTrailingSlash: {
-      type: Boolean,
-      default: false,
-    },
+defineProps({
+  /**
+   * Specify the label for the breadcrumb container
+   */
+  ariaLabel: {
+    type: String,
+    default: 'Breadcrumb',
   },
-  setup: () => ({ carbonPrefix }),
-};
+
+  /**
+   * Optional prop to omit the trailing slash for the breadcrumbs
+   */
+  noTrailingSlash: {
+    type: Boolean,
+    default: false,
+  },
+});
 </script>

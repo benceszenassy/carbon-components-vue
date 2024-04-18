@@ -10,20 +10,16 @@
   </li>
 </template>
 
-<script>
+<script setup>
 import { carbonPrefix } from '../../global/settings';
 
-export default {
-  name: 'CvBreadcrumbItem',
-  props: {
-    /**
-     * Is this item the current page?
-     */
-    isCurrentPage: {
-      type: Boolean,
-      default: false,
-    },
+defineProps({
+  /**
+   * Provide if this breadcrumb item represents the current page
+   */
+  isCurrentPage: {
+    type: Boolean,
+    default: false,
   },
-  setup: () => ({ carbonPrefix }),
-};
+});
 </script>

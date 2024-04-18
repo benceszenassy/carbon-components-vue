@@ -10,20 +10,16 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { carbonPrefix } from '../../global/settings';
 
-export default {
-  name: 'CvBreadcrumbSkeleton',
-  props: {
-    /**
-     * Stop trailing slash from being added
-     */
-    noTrailingSlash: {
-      type: Boolean,
-      default: false,
-    },
+defineProps({
+  /**
+   * Optional prop to omit the trailing slash for the breadcrumbs
+   */
+  noTrailingSlash: {
+    type: Boolean,
+    default: false,
   },
-  setup: () => ({ carbonPrefix }),
-};
+});
 </script>

@@ -4,11 +4,6 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { carbonPrefix } from '../../global/settings';
-
-export default {
-  name: 'CvBreadcrumbSkeletonItem',
-  setup: () => ({ carbonPrefix }),
-};
 </script>
